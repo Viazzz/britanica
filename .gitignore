@@ -9,6 +9,8 @@ uv.lock
 
 project/media/
 
+pwd
+
 project/.prod.env
 project/.env
 project/ssl/
