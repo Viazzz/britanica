@@ -5,6 +5,6 @@ project/socet/
 project/db.sqlite3
 project/celerybeat-schedule
 *pyc
-venv/
+.venv/
 set.txt
 pswd.txt
