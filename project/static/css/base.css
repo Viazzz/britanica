@@ -24,3 +24,7 @@ iframe {
     height: 100vh;        /* Viewport-relative units */
     width: 100vw;
 }
+
+.audio-card{
+    object-fit: cover;
+}

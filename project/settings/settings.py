@@ -156,8 +156,7 @@ THUMBNAIL_ALIASES = {
             "size": (100, 100),
             "crop": "smart",
             "quality": 90,
-            "autocrop": True,
-            
+            "autocrop": True,            
         }
     }
 }

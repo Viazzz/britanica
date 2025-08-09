@@ -9,11 +9,12 @@
       <div class="card my-3">
         <div class="row g-0">
           <div class="col-2 col-md-2">
-            <img src="{% thumbnail audio.audio_thumbnail 'audio_image' %}" class="img-fluid rounded-start" alt="{{ song.songName }}"/>
+            <img src="{% thumbnail audio.audio_thumbnail 'audio_image' %}" class="d-flex audio-card h-100 img-fluid img-thumbnail rounded-start" alt="{{ song.songName }}"/>
+            {% comment %} <img src="media/{{ audio.audio_thumbnail }}" class="d-flex audio-card h-100 img-fluid img-thumbnail rounded-start" alt="{{ song.songName }}"/> {% endcomment %}
           </div>
           <div class="col-8 col-md-8">
             <div class="card-body">
-              <h7 class="card-title">{{ audio.name }}</h7>
+              <p class="card-title fs-6 text">{{ audio.name }}</p>
             </div>
           </div>
           <div class="col-2 col-md-2">
