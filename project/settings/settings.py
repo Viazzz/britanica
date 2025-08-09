@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 
-DEBUG = eval(os.getenv("DEBUG", True))
+DEBUG = eval(os.getenv("DEBUG", "True"))
 if DEBUG:
     SECRET_KEY = "django-insecure--vsu*yyrpspd=oy2h%pmlq)kcyy8%%og7&gi(z5f%dane2=)r^"
     ALLOWED_HOSTS = []
@@ -21,7 +21,6 @@ if DEBUG:
         }
     }
 else:
-    DEBUG = True
     SECRET_KEY = os.getenv("SECRET_KEY")
     ALLOWED_HOSTS = list(os.getenv("DJANGO_ALLOWED_HOSTS").split(" "))
     DATABASES = {
