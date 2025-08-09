@@ -2,8 +2,12 @@ __pycache__/
 *.py[codz]
 *$py.class
 *.so
+*pyc
+.venv/
 
 uv.lock
+
+project/media/
 
 project/.prod.env
 project/.env
@@ -11,7 +15,3 @@ project/ssl/
 project/socet/
 project/db.sqlite3
 project/celerybeat-schedule
-*pyc
-.venv/
-set.txt
-pswd.txt
