@@ -1,0 +1,35 @@
+# upstream for uWSGI
+upstream uwsgi_app {
+    server unix:/code/socet/uwsgi_app.sock;
+}
+
+server {
+    listen 80;
+    server_name rg-ds;
+    server_tokens off;
+    return 301 https://$host$request_uri;
+}
+
+server{
+    listen 443 ssl;
+    server_tokens off;
+    server_name rg-ds;
+    ssl_certificate /code/ssl/fullchain.pem;
+    ssl_certificate_key /code/ssl/privkey.pem;
+    error_log    stderr warn;
+    access_log   /dev/stdout main;
+    proxy_force_ranges on;
+    add_header Accept-Ranges bytes;
+
+    location / {
+        include      /etc/nginx/uwsgi_params;
+        uwsgi_pass   uwsgi_app;
+    }
+
+    location /static/ {
+        alias /code/static/;
+    }
+    location /media/ {
+        alias /code/media/;
+    }
+}

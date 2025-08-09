@@ -1,0 +1,10 @@
+project/.prod.env
+project/.env
+project/ssl/
+project/socet/
+project/db.sqlite3
+project/celerybeat-schedule
+*pyc
+venv/
+set.txt
+pswd.txt

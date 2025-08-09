@@ -1,0 +1,26 @@
+.asteriskField {
+    display: none;
+}
+.c-item{
+    height: 400px;
+}
+.c-image{
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+}
+#top-menu-fix{
+    height: 55px;
+}
+
+/* iframe */
+body {
+    margin: 0;            /* Reset default margin */
+}
+iframe {
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100vh;        /* Viewport-relative units */
+    width: 100vw;
+}
